@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: book-service
+  template:
+    metadata:
+      labels:
+        app: book-service
+    spec:
+      serviceAccountName: book-service-account
+      imagePullSecrets:
+        - name: dockerhub-secret
+      containers:
+        - name: book-service
+          image: rayaneparis/book-service:3
+          ports:
+            - containerPort: 8081

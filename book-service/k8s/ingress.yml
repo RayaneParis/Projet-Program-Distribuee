@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: library-ingress
+spec:
+  rules:
+    - host: library.info
+      http:
+        paths:
+          - path: /books
+            pathType: Prefix
+            backend:
+              service:
+                name: book-service
+                port:
+                  number: 8081
+          - path: /users
+            pathType: Prefix
+            backend:
+              service:
+                name: user-service
+                port:
+                  number: 8082
