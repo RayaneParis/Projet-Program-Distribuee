@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Book Management </h1>
+        <p>Gestion de livres et utilisateurs - Microservices</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Book</h2>
+            <div class="form-group">
+                <input type="text" id="bookTitle" placeholder="Title" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="bookAuthor" placeholder="Author" />
+            </div>
+            <div class="form-group">
+                <input type="text" id="bookGenre" placeholder="Genre" />
+            </div>
+            <button onclick="addBook()">Add a book</button>
+            <div class="list" id="bookList"></div>
+        </div>
+
+        <div class="card">
+            <h2> Users </h2>
+            <div class="form-group">
+                <input type="text" id="userName" placeholder="Name" />
+            </div>
+            <div class="form-group">
+                <input type="email" id="userEmail" placeholder="Email" />
+            </div>
+            <button onclick="addUser()">Add a user</button>
+            <div class="list" id="userList"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

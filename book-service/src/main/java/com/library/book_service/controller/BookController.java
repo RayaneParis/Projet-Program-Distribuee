@@ -3,6 +3,7 @@ package com.library.book_service.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import com.library.book_service.service.BookService;
 
 @RestController
 @RequestMapping("/books")
+@CrossOrigin(origins= "*")
 public class BookController {
 
     private final BookService bookService;

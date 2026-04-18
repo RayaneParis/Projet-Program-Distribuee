@@ -17,6 +17,6 @@ spec:
         - name: dockerhub-secret
       containers:
         - name: book-service
-          image: rayaneparis/book-service:3
+          image: rayaneparis/book-service:4
           ports:
             - containerPort: 8081

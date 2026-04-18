@@ -17,6 +17,6 @@ spec:
         - name: dockerhub-secret
       containers:
         - name: user-service
-          image: rayaneparis/user-service:2
+          image: rayaneparis/user-service:3
           ports:
             - containerPort: 8082
