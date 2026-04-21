@@ -1,5 +1,5 @@
-const BOOKS_API = 'http://library.info/books';
-const USERS_API = 'http://library.info/users';
+const BOOKS_API = 'http://34.117.134.67/books';
+const USERS_API = 'http://34.117.134.67/users';
 
 async function loadBooks() {
     const res = await fetch(BOOKS_API);

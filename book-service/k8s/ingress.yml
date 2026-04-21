@@ -2,10 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: library-ingress
+  annotations:
+    kubernetes.io/ingress.class: "gce"
+    kubernetes.io/ingress.allow-http: "true"
 spec:
   rules:
-    - host: library.info
-      http:
+    - http:
         paths:
           - path: /books
             pathType: Prefix
